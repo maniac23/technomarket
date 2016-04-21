@@ -1,0 +1,127 @@
+/*==========  Desktop First Method  ==========*/
+@import 'color.scss';
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1280px){
+	.header_phone,
+	.header_delivery,
+	.main_menu{
+		display: none;
+	}
+	header{
+		padding: 14px 20px;
+	}
+	.header_info_section{
+		margin-bottom: 0;
+		padding-left: 30px;
+	}
+	.header_logo{
+		margin-right: 40px;
+		flex-basis: 20%;
+	}
+	.header_search{
+		flex-basis: 80%;
+		margin-right: 20px;
+		#search{
+			width: 90%;
+		}
+	}
+	.menu_icon{
+		display:block;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 25px;
+		&:hover{
+			cursor: pointer;
+		}
+	}
+	.main_menu{
+		position: absolute;
+		width: 100%;
+		margin-left: -20px;
+		top: 100%;
+		background-color: $main_color;
+		li{
+			padding: 0;
+			a{
+				display: block;
+				text-align: left;
+			}
+		}
+	}
+	.cart{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 40px;
+		font-size: 20px;
+		span{
+			display: none;
+		}
+	}
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 640px){
+	.header_info_section{
+		.header_logo{
+			font-size: 25px;
+			flex-basis: 100%;
+			margin-left: 20px;
+		}
+		.header_search{
+			display: none;
+			position: absolute;
+			left: 0px;
+			width: 100%;
+			top: 100%;
+			border-top: 1px solid #fff;
+			i{
+				display: none;
+			}
+			#search{
+				width: 100%;
+				padding: 5px 15px;
+			}
+		}
+		.search_button{
+			display: block;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 90px;
+			background-color: inherit;
+			border: medium none;
+			color: rgb(255, 255, 255);
+			font-size: 20px;
+			cursor: pointer;
+		}
+	}
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 360px){
+	.cart{
+		right: 25px;
+	}
+	.header_info_section{
+		.search_button{
+			right: 55px;
+		}
+	}
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px){
+	/**/
+}
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px){
+	/**/
+}
+
+
+

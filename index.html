@@ -39,6 +39,54 @@
 			</div>
 		</nav>
 	</header>
+	<section class="catalog">
+		<div class="filter_wrapper">
+			<div class="catalog_filters">
+			<span class="filter_close">x</span>
+				<div class="filter_select filter_type">
+					<span class="filter_placeholder">Любого типа</span>
+					<ul>
+						<li data-value="compact">компакт-камера</li>
+						<li data-value="no_mirror">беззеркальная</li>
+						<li data-value="mirror">зеркальная</li>
+						<li data-value="format">среднеформатная</li>
+					</ul>
+					<input type="hidden" name="model"/>
+				</div>
+				<div class="filter_select filter_brand">
+					<span class="filter_placeholder">Любого бренда</span>
+					<ul>
+						<li data-value="canon">Canon</li>
+						<li data-value="nikon">Nikon</li>
+						<li data-value="sony">Sony</li>
+						<li data-value="fujifilm">fujifilm</li>
+						<li data-value="samsung">Samsung</li>
+						<li data-value="olympus">Olympus</li>
+						<li data-value="panasonic">Panasonic</li>
+						<li data-value="polaroid">Polaroid</li>
+					</ul>
+					<input type="hidden" name="brand"/>
+				</div>
+				<div class="filter_cost">
+					<div class="filter_cost_from">
+						<span>по цене</span>
+						<input type="number" min="0" placeholder="от">
+					</div>
+					<div class="filter_cost_to">
+						<input type="number" min="1" placeholder="до">
+						<span>рублей</span>
+					</div>
+				</div>
+			</div>
+	</div>
+
+		<div class="catalog_hidden_filters">
+			<div class="catalog_category_name">
+				
+			</div>
+			<div class="filter_icon"></div>
+		</div>
+	</section>
 	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 	<script src="js/common.js"></script>
 </body>

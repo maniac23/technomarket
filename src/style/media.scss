@@ -72,7 +72,17 @@
 		align-items: center;
 	}
 }
-
+@media only screen and (max-width : 980px){
+	.catalog_content{
+		margin-top: 0;
+		.catalog_item{
+			flex: 1 1 30%;
+		}
+		.catalog_item_big{
+			flex: 2 2 60%;
+		}
+	}
+}
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 640px){
@@ -108,6 +118,16 @@
 			color: #fff;
 			font-size: 1.428rem;
 			cursor: pointer;
+		}
+	}
+		.catalog_content{
+		margin-top: 0;
+		.catalog_item{
+			flex: 1 1 100%;
+		}
+		.catalog_item_big{
+			flex: 2 2 100%;
+			flex-direction: column;
 		}
 	}
 }

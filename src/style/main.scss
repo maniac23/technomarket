@@ -7,7 +7,7 @@ body{
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
 	box-sizing: border-box;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 header{
 	color: #fff;
@@ -23,9 +23,14 @@ header{
 	margin-bottom: 15px;
 	align-items: center;
 	.header_logo{
-		font-size: 2rem;
-		color: $header_color;
-		margin-left: 1.25rem;
+		h1{
+			font-size: 2rem;
+			color: $header_color;
+			margin-left: 1.25rem;
+			margin: 0;
+			padding: 0;
+			font-weight: normal;
+		}
 	}
 	#search{
 		border: none;
@@ -288,6 +293,12 @@ nav{
 			background-color: rgba($main_color, .1);
 			border: 1px solid $main_color;
 			cursor: pointer;
+			&:nth-child(4n+3){
+			border-right: 1px solid $main_color;
+		}
+		}
+		&:nth-child(4n+3){
+			border-right: none;
 		}
 		img{
 			width: 100%;
@@ -356,15 +367,27 @@ nav{
 			border-top: 1px solid $big_border_color;
 			margin-bottom: 1.25rem;
 		}
-		.catalog_former_price{
+		.catalog_old_price{
 			text-decoration: line-through;
 			color: $font_color;
 			padding: 0.625rem;
 		}
 	}
 }
-
-
+footer{
+	background-color: $main_color;
+	padding: 1.25rem 8.125rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;
+	h1, p{
+		margin: 0;
+		padding: 0;
+		font-weight: normal;
+	}
+}
 
 
 

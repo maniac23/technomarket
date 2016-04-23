@@ -37,5 +37,6 @@ $(document).ready(function() {
 	})
 	$('.filter_close').on('click', function(){
 		$('.filter_wrapper').removeClass('active');
-	})
+	});
+
 });

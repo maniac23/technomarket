@@ -77,6 +77,9 @@
 		margin-top: 0;
 		.catalog_item{
 			flex: 1 1 30%;
+			&:nth-child(4n+3){
+				border-right: 1px solid rgba($font_color, .4); 
+			}
 		}
 		.catalog_item_big{
 			flex: 2 2 60%;
@@ -129,6 +132,9 @@
 			flex: 2 2 100%;
 			flex-direction: column;
 		}
+	}
+	footer{
+		padding: 1.25rem;
 	}
 }
 

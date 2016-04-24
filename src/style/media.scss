@@ -1,6 +1,6 @@
 /*==========  Desktop First Method  ==========*/
 @import 'color.scss';
-/* Large Devices, Wide Screens */
+
 @media only screen and (max-width : 1280px){
 	.header_phone,
 	.header_delivery,
@@ -72,6 +72,7 @@
 		align-items: center;
 	}
 }
+
 @media only screen and (max-width : 980px){
 	.catalog_content{
 		margin-top: 0;
@@ -87,7 +88,6 @@
 	}
 }
 
-/* Medium Devices, Desktops */
 @media only screen and (max-width : 640px){
 	html{
 		font-size: 14px;
@@ -136,22 +136,6 @@
 	footer{
 		padding: 1.25rem;
 	}
-}
-
-
-/* Small Devices, Tablets */
-@media only screen and (max-width : 360px){
-
-}
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px){
-	/**/
-}
-
-
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 320px){
-	/**/
 }
 
 

@@ -12,11 +12,11 @@ $(document).ready(function() {
 		$(this).addClass('active');
 		$('.catalog_category_name').text($('.main_menu li.active').text());
 	})
-	
+// toggling search field
 	$('.search_button').on('click', function(){
 		$('.header_search').slideToggle();
 	});
-
+// filters
 	$('.filter_select').on('click','.filter_placeholder',function(){
 		var parent = $(this).closest('.filter_select');
 		if ( ! parent.hasClass('is-open')){
@@ -28,10 +28,11 @@ $(document).ready(function() {
 	}).on('click','ul>li',function(){
 		var parent = $(this).closest('.filter_select');
 		parent.removeClass('is-open').find('.filter_placeholder').text( $(this).text() );
-		parent.find('input[type=hidden]').attr('value', $(this).attr('data-value') );
 	});
+// adding text of selected category
 	$('.catalog_category_name').text($('.main_menu li.active').text());
 
+// tooggling filters modal window
 	$('.filter_icon').on('click', function(){
 		$('.filter_wrapper').addClass('active');
 	})

@@ -1,4 +1,5 @@
 @import 'color.scss';
+// default styles
 html{
 	font-size: 16px;
 }
@@ -9,6 +10,8 @@ body{
 	box-sizing: border-box;
 	overflow-x: hidden;
 }
+
+// header styles
 header{
 	color: #fff;
 	background-color: #4488FF;
@@ -42,41 +45,44 @@ header{
 		text-transform: uppercase;
 	}
 }
+
 .menu_icon{
 	display: none;
 }
+
 .search_button{
 	display:none;
 }
+
 nav{
 	display: flex;
 	justify-content: space-between;
 }
 .main_menu{
-	 list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    display:flex;
-    justify-content: space-between;
-    li{
-    	padding: 15px 0;
-    	a{
-    		color: #fff;
-    		text-align: center;
-    		padding: 0.875rem 1rem;
-    		text-decoration: none;
-    		transition: all 0.3s ease-in;
-    		font-size: 1.0625rem;
-    		&:hover{
-    			background-color: $header_color;
-    		}
-    	}
-    }
-  }
-  .active{
-  	background-color: $header_color;
-  }
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	display:flex;
+	justify-content: space-between;
+	li{
+		padding: 15px 0;
+		a{
+			color: #fff;
+			text-align: center;
+			padding: 0.875rem 1rem;
+			text-decoration: none;
+			transition: all 0.3s ease-in;
+			font-size: 1.0625rem;
+			&:hover{
+				background-color: darken($main_color, 20%);
+			}
+		}
+	}
+}
+.active{
+	background-color: $header_color;
+}
 .cart{
 	padding: 0.9375rem 0;
 	a{
@@ -88,6 +94,8 @@ nav{
 		margin-left: 0.625rem;
 	}
 }  
+
+// catalog styles
 .catalog{
 	padding: 1.875rem 8.125rem;
 }
@@ -97,64 +105,66 @@ nav{
 	align-items: center;
 	flex-direction: row;
 }
+
 .filter_wrapper{
 	.filter_close{
 		display: none;
 	}
-		&.active{
-			display:block;
-			position: fixed;
-			top: 0px;
-			left: 0px;
-			width: 100%;
-			height: 100%;
-			overflow: auto;
-			background-color: rgba(0, 0, 0, 0.4);
-			.filter_close{
-				display: inline-block;
-				position: absolute;
-				top: 2%;
-				right: 2%;
-				width: 25px;
-				height: 25px;
-				text-align: center;
-				font-weight: bold;
-				cursor: pointer;
-				color: #fff;
-				background-color: #000;
-				border-radius: 50%;
-				transition: transform 0.5s ease;
-				&:hover{
-					transform: rotate(360deg);
-				}
+	&.active{
+		display:block;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: rgba(0, 0, 0, 0.4);
+		.filter_close{
+			display: inline-block;
+			position: absolute;
+			top: 2%;
+			right: 2%;
+			width: 25px;
+			height: 25px;
+			text-align: center;
+			font-weight: bold;
+			cursor: pointer;
+			color: #fff;
+			background-color: #000;
+			border-radius: 50%;
+			transition: transform 0.5s ease;
+			&:hover{
+				transform: rotate(360deg);
 			}
-			.catalog_filters{
+		}
+		.catalog_filters{
+			flex-direction: column;
+			width: 70%;
+			position: absolute;
+			top: 10%;
+			left: 50%;
+			transform: translate(-50%);
+			background-color: #fff;
+			padding: 2.5rem 2rem;
+			border: 1px solid $font_color;
+			.filter_select{
+				margin-bottom: 0.625rem;
+			}
+			.filter_cost{
 				flex-direction: column;
-				width: 70%;
-				position: absolute;
-				top: 10%;
-				left: 50%;
-				transform: translate(-50%);
-				background-color: #fff;
-				padding: 2.5rem 2rem;
-				border: 1px solid $font_color;
-				.filter_select{
-					margin-bottom: 0.625rem;
+				width: 100%;
+				span{
+					display: none;
 				}
-				.filter_cost{
-					flex-direction: column;
+				input{
 					width: 100%;
-					span{
-						display: none;
-					}
-					input{
-						width: 100%;
-						margin-bottom: 0.625rem;
-					}
+					margin-bottom: 0.625rem;
 				}
 			}
 		}
 	}
+}
+
 .filter_select{
   position: relative;
   display: block;
@@ -178,7 +188,6 @@ nav{
     &:hover{
        background: darken(#fff,2%);
     }
-
     &:after{
       position: absolute;
       right: 1rem;
@@ -189,7 +198,6 @@ nav{
       z-index: 10;
     }
   }
-
   &.is-open{
     .filter_placeholder:after{
       content: '\f077';
@@ -230,11 +238,11 @@ nav{
 .filter_brand, .filter_type{
 	flex-basis: 20%;
 }
+
 .filter_cost{
 	display: flex;
 	color: $font_color;
 	text-transform: uppercase;
-
 	.filter_cost_from, .filter_cost_to{
 		display:flex;
 		align-items: center;
@@ -255,6 +263,7 @@ nav{
 		}
 	}
 }
+
 .catalog_hidden_filters{
 	display:none;
 	border-bottom: 1px solid $font_color;
@@ -273,6 +282,8 @@ nav{
 		cursor: pointer;
 	}
 }
+
+// catalog content styles
 .catalog_content{
 	margin-top: 2.5rem;
 	display: flex;
@@ -294,8 +305,8 @@ nav{
 			border: 1px solid $main_color;
 			cursor: pointer;
 			&:nth-child(4n+3){
-			border-right: 1px solid $main_color;
-		}
+				border-right: 1px solid $main_color;
+			}
 		}
 		&:nth-child(4n+3){
 			border-right: none;
@@ -335,7 +346,6 @@ nav{
 		flex: 1 1 50%;
 		display: flex;
 		flex-direction: row;
-		flex-wrap: wrap;
 		padding: 0.625rem;
 		h2{
 			margin-top: 0;
@@ -375,6 +385,8 @@ nav{
 		}
 	}
 }
+
+// footer styles
 footer{
 	background-color: $main_color;
 	padding: 1.25rem 8.125rem;

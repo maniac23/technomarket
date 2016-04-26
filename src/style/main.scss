@@ -10,11 +10,14 @@ body{
 	box-sizing: border-box;
 	overflow-x: hidden;
 }
-
+.container{
+	max-width: 1366px;
+	margin: auto;
+}
 // header styles
 header{
 	color: #fff;
-	background-color: #4488FF;
+	background-color: $main_color;
 	max-height: 115px;
 	text-transform: uppercase;
 	padding: 1.25rem 8.125rem 0;
@@ -44,6 +47,16 @@ header{
 		padding: 0.625rem 0.875rem;
 		text-transform: uppercase;
 	}
+	.header_delivery{
+		a{
+			color: #fff;
+			text-decoration: none;
+			transition: all 0.3s ease-in;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
 }
 
 .menu_icon{
@@ -66,14 +79,14 @@ nav{
 	display:flex;
 	justify-content: space-between;
 	li{
-		padding: 15px 0;
+		padding: 1rem 0;
 		a{
 			color: #fff;
 			text-align: center;
-			padding: 0.875rem 1rem;
+			padding: 1rem 1rem;
 			text-decoration: none;
 			transition: all 0.3s ease-in;
-			font-size: 1.0625rem;
+			font-size: 1rem;
 			&:hover{
 				background-color: darken($main_color, 20%);
 			}
@@ -124,14 +137,10 @@ nav{
 			position: absolute;
 			top: 2%;
 			right: 2%;
-			width: 25px;
-			height: 25px;
 			text-align: center;
 			font-weight: bold;
 			cursor: pointer;
-			color: #fff;
-			background-color: #000;
-			border-radius: 50%;
+			color: $font_color;
 			transition: transform 0.5s ease;
 			&:hover{
 				transform: rotate(360deg);
@@ -216,7 +225,7 @@ nav{
     top: 100%;
     left: 0;
     list-style: none;
-    margin: 0;
+    margin: 0 0 0 -1px;
     padding: 0;
     z-index: 100;
     border: 1px solid $font_color;
@@ -287,16 +296,17 @@ nav{
 .catalog_content{
 	margin-top: 2.5rem;
 	display: flex;
-	justify-content: space-between;
 	flex-wrap: wrap;
 	.catalog_item{
-		flex: 1 1 25%;
+		flex: 0 1 25%;
 		padding: 0.9375rem 0.9375rem 1.875rem;
 		box-sizing: border-box;
 		margin: 0;
 		flex-basis: 25%;
 		border-right: 1px solid rgba($font_color, .4);
 		border-bottom: 1px solid rgba($font_color, .4);
+		border-left: 1px solid transparent;
+		border-top: 1px solid transparent;
 		transition: all 0.2s ease-in;
 		display: flex;
 		flex-direction: column;
@@ -309,7 +319,7 @@ nav{
 			}
 		}
 		&:nth-child(4n+3){
-			border-right: none;
+			border-right: 1px solid transparent;
 		}
 		img{
 			width: 100%;
@@ -401,8 +411,63 @@ footer{
 		font-weight: normal;
 	}
 }
-
-
+// form styles
+.cart_overlay{
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+	#cart{
+		display: flex;
+		flex-flow: column nowrap;
+		padding: 1rem;
+		color: $font_color;
+		width: 80%;
+		max-width: 400px;
+		background-color: #FFF;
+		position: absolute;
+		top: 50px;
+		left: 50%;
+		transform: translateX(-50%);
+		border-radius: 3px;
+		border: 5px solid $font_color;
+		h2{
+			text-align: center;
+		}
+		label{
+			text-transform: uppercase;
+			margin-bottom: 10px;
+		}
+		input{
+			padding: 0.5rem;
+			margin-bottom: 10px;
+		}
+		button{
+			margin-top: 20px;
+			padding: 0.7rem;
+			border-radius: 3px;
+			border: none;
+			cursor: pointer;
+			text-transform: uppercase;
+			background-color: $main_color;
+			color: #fff;
+			font-weight: bold;
+		}
+		.cart_close{
+			position: absolute;
+			top: 0.5rem;
+			right: 0.5rem;
+			cursor: pointer;
+			font-weight: bold;
+		}
+	}
+}
 
 
 

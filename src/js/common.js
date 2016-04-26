@@ -56,6 +56,5 @@ $('.cart_overlay').on('click', function(e){
 
 $('#cart').on('submit', function(){
 	$('.cart_overlay').fadeOut();
-	alert('Спасибо за заказ');
 });
 });

@@ -46,6 +46,9 @@ $('.cart, .catalog_price span i').on('click', function(){
 $('.cart_close').on('click', function(){
 	$('.cart_overlay').fadeOut();
 });
+$('#cart').on('submit', function(){
+	$('.cart_overlay').fadeOut();
+});
 $('.cart_overlay').on('click', function(e){
 	if(($(e.target)).is('.cart_overlay')){
 		$('.cart_overlay').fadeOut();
@@ -54,7 +57,4 @@ $('.cart_overlay').on('click', function(e){
 	}
 });
 
-$('#cart').on('submit', function(){
-	$('.cart_overlay').fadeOut();
-});
 });

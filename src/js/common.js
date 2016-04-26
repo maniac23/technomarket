@@ -52,8 +52,6 @@ $('#cart').on('submit', function(){
 $('.cart_overlay').on('click', function(e){
 	if(($(e.target)).is('.cart_overlay')){
 		$('.cart_overlay').fadeOut();
-	} else {
-		return false;
 	}
 });
 
